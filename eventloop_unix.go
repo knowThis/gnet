@@ -188,6 +188,7 @@ func (el *eventloop) loopWrite(c *conn) error {
 
 	if c.outboundBuffer.IsEmpty() {
 		_ = el.poller.ModRead(c.fd)
+		el.eventHandler.WriteFinish(c)
 	}
 
 	return nil

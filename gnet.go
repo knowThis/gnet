@@ -163,6 +163,9 @@ type (
 		// Parameter:out is the return value which is going to be sent back to the client.
 		React(frame []byte, c Conn) (out []byte, action Action)
 
+		// 数据发送完成事件
+		WriteFinish(c Conn)
+
 		// Tick fires immediately after the server starts and will fire again
 		// following the duration specified by the delay return value.
 		Tick() (delay time.Duration, action Action)
@@ -208,6 +211,11 @@ func (es *EventServer) PreWrite() {
 // Call c.Read() or c.ReadN(n) within the parameter:c to read incoming data from client.
 // Parameter:out is the return value which is going to be sent back to the client.
 func (es *EventServer) React(frame []byte, c Conn) (out []byte, action Action) {
+	return
+}
+
+// WriteFinish  数据发送完成
+func (es *EventServer) WriteFinish(c Conn) {
 	return
 }
 
