@@ -142,6 +142,7 @@ func (el *eventloop) loopRead(c *conn) error {
 			if err = c.write(out); err != nil {
 				return err
 			}
+			el.eventHandler.WriteFinish(c)
 		}
 		switch action {
 		case None:
@@ -188,7 +189,6 @@ func (el *eventloop) loopWrite(c *conn) error {
 
 	if c.outboundBuffer.IsEmpty() {
 		_ = el.poller.ModRead(c.fd)
-		el.eventHandler.WriteFinish(c)
 	}
 
 	return nil
