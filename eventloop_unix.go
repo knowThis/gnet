@@ -28,8 +28,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/panjf2000/gnet/errors"
-	"github.com/panjf2000/gnet/internal/netpoll"
+	"github.com/knowthis/gnet/errors"
+	"github.com/knowthis/gnet/internal/netpoll"
 	"golang.org/x/sys/unix"
 )
 

@@ -27,8 +27,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/panjf2000/gnet/errors"
-	"github.com/panjf2000/gnet/internal/reuseport"
+	"github.com/knowthis/gnet/errors"
+	"github.com/knowthis/gnet/internal/reuseport"
 	"golang.org/x/sys/unix"
 )
 

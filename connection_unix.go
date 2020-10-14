@@ -28,10 +28,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/panjf2000/gnet/internal/netpoll"
-	"github.com/panjf2000/gnet/pool/bytebuffer"
-	prb "github.com/panjf2000/gnet/pool/ringbuffer"
-	"github.com/panjf2000/gnet/ringbuffer"
+	"github.com/knowthis/gnet/internal/netpoll"
+	"github.com/knowthis/gnet/pool/bytebuffer"
+	prb "github.com/knowthis/gnet/pool/ringbuffer"
+	"github.com/knowthis/gnet/ringbuffer"
 	"golang.org/x/sys/unix"
 )
 
